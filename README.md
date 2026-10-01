@@ -83,6 +83,8 @@ The absence of a warning does not guarantee the absence of risk.
 - **GitHub Actions** — automated checks.
 - **Docker** — reproducible execution.
 
+[Project roadmap](ROADMAP.md)
+
 ## Project Status
 
 Early development. The capabilities described above are planned
