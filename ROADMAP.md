@@ -6,7 +6,7 @@ adult low back pain cases.
 ## Milestones
 
 - [x] RC-001 — Prepare the environment, Git repository, and bilingual README.
-- [ ] RC-002 — Publish the repository and document the development workflow.
+- [x] RC-002 — Publish the repository and document the development workflow.
 - [ ] RC-003 — Define requirements, the assessment workflow, and acceptance criteria.
 - [ ] RC-004 — Set up the Node.js + TypeScript server and health endpoint.
 - [ ] RC-005 — Implement case creation, storage, and retrieval with SQLite.
@@ -43,6 +43,6 @@ and its changes are merged.
 
 ## Current Focus
 
-We are currently working on RC-002.
-The next deliverable is a project roadmap and development workflow
-reviewed and merged through a Pull Request.
+We are currently working on RC-003.
+The next deliverable is a reviewed requirements document
+for the initial case-management milestone and assessment workflow.
