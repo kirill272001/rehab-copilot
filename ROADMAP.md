@@ -7,8 +7,8 @@ adult low back pain cases.
 
 - [x] RC-001 — Prepare the environment, Git repository, and bilingual README.
 - [x] RC-002 — Publish the repository and document the development workflow.
-- [ ] RC-003 — Define requirements, the assessment workflow, and acceptance criteria.
-- [ ] RC-004 — Set up the Node.js + TypeScript server and health endpoint.
+- [x] RC-003 — Define requirements, the assessment workflow, and acceptance criteria.
+- [x] RC-004 — Set up the Node.js + TypeScript server and health endpoint.
 - [ ] RC-005 — Implement case creation, storage, and retrieval with SQLite.
 - [ ] RC-006 — Build the interface for creating, listing, and opening cases.
 - [ ] RC-007 — Add structured history-taking forms.
@@ -43,6 +43,6 @@ and its changes are merged.
 
 ## Current Focus
 
-We are currently working on RC-003.
-The next deliverable is a reviewed requirements document
-for the initial case-management milestone and assessment workflow.
+We are currently working on RC-004.
+The next deliverable is a reviewed TypeScript HTTP server
+with a health endpoint and local startup instructions.
