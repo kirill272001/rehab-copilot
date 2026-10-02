@@ -1,0 +1,30 @@
+{
+  "name": "rehab-copilot",
+  "type": "module",
+  "private": true,
+  "version": "0.1.0",
+  "description":"An educational AI assistant for physiotherapy assessment and rehabilitation planning.",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+  "dev": "tsx watch src/server.ts",
+  "typecheck": "tsc --noEmit"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirill272001/rehab-copilot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirill272001/rehab-copilot/issues"
+  },
+  "homepage": "https://github.com/kirill272001/rehab-copilot#readme",
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

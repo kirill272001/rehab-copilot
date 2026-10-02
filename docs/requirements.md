@@ -17,8 +17,6 @@ As a physiotherapist, I want to create and save an educational case
 with symptoms and patient history so that I can reopen it
 and add assessment findings.
 
-## Acceptance Criteria
-
 ## Case Fields
 
 | Field           | Required | Validation                       |

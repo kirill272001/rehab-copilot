@@ -87,8 +87,35 @@ The absence of a warning does not guarantee the absence of risk.
 
 ## Project Status
 
-Early development. The capabilities described above are planned
-and have not yet been implemented.
+The initial HTTP server is implemented with a health endpoint
+and basic error responses. Case management and AI features
+are not implemented yet.
 
 This project is being built as a developer portfolio project
 with assistance from AI tools for writing and reviewing code.
+
+## Local Development
+
+Requires Node.js 22 and npm.
+
+```bash
+npm ci
+npm run typecheck
+npm run dev
+```
+
+The server runs at http://127.0.0.1:3000.
+
+In another terminal:
+
+```bash
+curl -i http://127.0.0.1:3000/health
+```
+
+Expected response: HTTP 200 with
+`{"status":"ok","service":"rehab-copilot"}`.
+
+Unknown paths return HTTP 404.
+Unsupported methods on `/health` return HTTP 405.
+
+Stop the development server with Ctrl+C.
