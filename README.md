@@ -94,6 +94,29 @@ are not implemented yet.
 This project is being built as a developer portfolio project
 with assistance from AI tools for writing and reviewing code.
 
+## Case API
+
+The server runs at http://127.0.0.1:3000.
+
+| Method | Path       | Purpose               |
+| ------ | ---------- | --------------------- |
+| GET    | /health    | Check server health   |
+| GET    | /cases     | List saved cases      |
+| POST   | /cases     | Create a case         |
+| GET    | /cases/:id | Retrieve a case by ID |
+
+Creating a case requires `Content-Type: application/json`
+and the fields `title`, `age`, `symptoms`, and `patientHistory`.
+
+Only fictional adult cases are supported. Age must be an
+integer from 18 to 120. Invalid input is rejected before storage.
+
+Cases are stored locally in `data/rehab.sqlite`.
+The database file is excluded from Git.
+
+Run `npm run typecheck` to check types.
+Run `npm test` to run validation and repository tests.
+
 ## Local Development
 
 Requires Node.js 22 and npm.
