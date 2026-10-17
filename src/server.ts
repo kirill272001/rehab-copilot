@@ -2,10 +2,34 @@ import { createServer } from "node:http";
 import type { ServerResponse } from "node:http";
 import { createCaseRepository } from "./cases/case.repository.js";
 import { validateCreateCase } from "./cases/case.validation.js";
+import { readFile } from "node:fs/promises";
 
 const host = "127.0.0.1";
 const port = 3000;
 const repository = createCaseRepository();
+const publicFiles = new Map([
+  [
+    "/",
+    {
+      file: new URL("../public/index.html", import.meta.url),
+      contentType: "text/html; charset=utf-8",
+    },
+  ],
+  [
+    "/styles.css",
+    {
+      file: new URL("../public/styles.css", import.meta.url),
+      contentType: "text/css; charset=utf-8",
+    },
+  ],
+  [
+    "/app.js",
+    {
+      file: new URL("../public/app.js", import.meta.url),
+      contentType: "text/javascript; charset=utf-8",
+    },
+  ],
+]);
 
 // Общий способ отправить статус и данные в формате JSON.
 function sendJson(
@@ -23,6 +47,26 @@ const server = createServer(async (request, response) => {
   try {
     const url = new URL(request.url ?? "/", `http://${host}:${port}`);
     const path = url.pathname;
+    const publicFile = publicFiles.get(path);
+
+    if (publicFile) {
+      if (request.method !== "GET" && request.method !== "HEAD") {
+        response.setHeader("Allow", "GET, HEAD");
+        sendJson(response, 405, { error: "Method not allowed" });
+        return;
+      }
+
+      const content = await readFile(publicFile.file);
+
+      response.writeHead(200, {
+        "Content-Type": publicFile.contentType,
+        "Cache-Control": "no-store",
+        "X-Content-Type-Options": "nosniff",
+      });
+
+      response.end(request.method === "HEAD" ? undefined : content);
+      return;
+    }
 
     if (path === "/health") {
       if (request.method !== "GET") {

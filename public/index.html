@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rehab Copilot</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+
+  <body>
+    <header class="page-header">
+      <p class="eyebrow">НАВЧАЛЬНИЙ ПРОЄКТ</p>
+      <h1>Rehab Copilot</h1>
+      <p>
+        Створюйте та переглядайте вигадані випадки болю в попереку у дорослих.
+        Не вводьте реальні персональні дані.
+      </p>
+    </header>
+
+    <main class="layout">
+      <section class="card" aria-labelledby="create-heading">
+        <h2 id="create-heading">Новий випадок</h2>
+        <p class="muted">Усі поля обов’язкові. Вік: 18–120 років.</p>
+
+        <form id="case-form" novalidate>
+          <fieldset id="case-fields">
+            <label for="title">Назва випадку</label>
+            <input
+              id="title"
+              name="title"
+              required
+              aria-describedby="title-error"
+            />
+            <p id="title-error" class="field-error"></p>
+
+            <label for="age">Вік</label>
+            <input
+              id="age"
+              name="age"
+              type="number"
+              min="18"
+              max="120"
+              step="1"
+              required
+              aria-describedby="age-error"
+            />
+            <p id="age-error" class="field-error"></p>
+
+            <label for="symptoms">Скарги</label>
+            <textarea
+              id="symptoms"
+              name="symptoms"
+              rows="4"
+              required
+              aria-describedby="symptoms-error"
+            ></textarea>
+            <p id="symptoms-error" class="field-error"></p>
+
+            <label for="patientHistory">Анамнез</label>
+            <textarea
+              id="patientHistory"
+              name="patientHistory"
+              rows="4"
+              required
+              aria-describedby="patientHistory-error"
+            ></textarea>
+            <p id="patientHistory-error" class="field-error"></p>
+
+            <button id="save-button" type="submit">Зберегти випадок</button>
+          </fieldset>
+
+          <p id="form-status" role="status"></p>
+        </form>
+      </section>
+
+      <div class="right-column">
+        <section class="card" aria-labelledby="list-heading">
+          <div class="section-heading">
+            <h2 id="list-heading">Збережені випадки</h2>
+            <button id="refresh-button" type="button" class="secondary">
+              Оновити
+            </button>
+          </div>
+
+          <p id="list-status" role="status"></p>
+          <ul id="case-list" class="case-list"></ul>
+        </section>
+
+        <section class="card" aria-labelledby="details-heading">
+          <h2 id="details-heading">Перегляд випадку</h2>
+          <p id="details-status" role="status">Виберіть випадок зі списку.</p>
+          <dl id="case-details"></dl>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
