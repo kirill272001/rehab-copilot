@@ -119,17 +119,24 @@ Run `npm test` to run validation and repository tests.
 
 ## Local Development
 
-Requires Node.js 22 and npm.
+Requires Node.js 22.22.2 and npm.
+
+From the project directory:
 
 ```bash
 npm ci
 npm run typecheck
+npm test
 npm run dev
 ```
 
-The server runs at http://127.0.0.1:3000.
+Open http://127.0.0.1:3000 in your browser.
 
-In another terminal:
+The interface supports creating, listing, and viewing fictional cases.
+Validation errors preserve entered values. The form is cleared only
+after the server confirms successful creation.
+
+To check server health, run in another terminal:
 
 ```bash
 curl -i http://127.0.0.1:3000/health

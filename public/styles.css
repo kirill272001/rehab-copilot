@@ -1,0 +1,197 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #203334;
+  background: #f1f5f4;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page-header,
+.layout {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.page-header {
+  padding-top: 40px;
+}
+
+.eyebrow {
+  color: #286c61;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+h1 {
+  margin: 8px 0;
+  font-size: 2.4rem;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.card {
+  background: white;
+  border: 1px solid #d6e2df;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.right-column {
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #809a93;
+  border-radius: 8px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  background: #176b58;
+  color: white;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #105341;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+:focus-visible {
+  outline: 3px solid #c97918;
+  outline-offset: 3px;
+}
+
+.secondary {
+  background: #e6efec;
+  color: #203334;
+}
+
+.secondary:hover {
+  background: #d3e3dd;
+}
+
+.section-heading {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.muted,
+.case-meta {
+  color: #536761;
+}
+
+.field-error {
+  color: #a22222;
+  font-size: 0.9rem;
+  margin: 4px 0 16px;
+}
+
+[aria-invalid="true"] {
+  border-color: #a22222;
+}
+
+.case-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.case-list li + li {
+  margin-top: 10px;
+}
+
+.case-button {
+  width: 100%;
+  text-align: left;
+  background: #edf4f1;
+  color: #203334;
+  overflow-wrap: anywhere;
+}
+
+.case-button:hover {
+  background: #dcebe5;
+}
+
+.case-meta {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+dt {
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+dd {
+  margin: 4px 0 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header,
+  .layout {
+    padding: 16px;
+  }
+}

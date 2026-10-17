@@ -9,8 +9,8 @@ adult low back pain cases.
 - [x] RC-002 — Publish the repository and document the development workflow.
 - [x] RC-003 — Define requirements, the assessment workflow, and acceptance criteria.
 - [x] RC-004 — Set up the Node.js + TypeScript server and health endpoint.
-- [ ] RC-005 — Implement case creation, storage, and retrieval with SQLite.
-- [ ] RC-006 — Build the interface for creating, listing, and opening cases.
+- [x] RC-005 — Implement case creation, storage, and retrieval with SQLite.
+- [x] RC-006 — Build the interface for creating, listing, and opening cases.
 - [ ] RC-007 — Add structured history-taking forms.
 - [ ] RC-008 — Implement demo mode with clearly labeled prewritten responses.
 - [ ] RC-009 — Connect the Python service to a language model API.
@@ -43,6 +43,6 @@ and its changes are merged.
 
 ## Current Focus
 
-We are currently working on RC-004.
-The next deliverable is a reviewed TypeScript HTTP server
-with a health endpoint and local startup instructions.
+We are currently working on RC-006.
+The next deliverable is a browser interface for creating,
+listing, and viewing fictional educational cases.
